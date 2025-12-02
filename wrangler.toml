@@ -1,0 +1,8 @@
+name = "wcengenharia-static"
+compatibility_date = "2025-12-01"
+
+[assets]
+directory = "./mirror"
+
+# Telemetria Wrangler desativada
+send_metrics = false
