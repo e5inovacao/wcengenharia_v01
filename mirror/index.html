@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8" />
@@ -92,6 +92,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <meta property="og:image" content="/wp-content/uploads/2024/02/Design-sem-nome-69-300x300.png" />
 <!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="generator" content="Elementor 3.25.10; features: e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading; settings: css_print_method-external, google_font-enabled, font_display-swap">
 			<style>
+				/* 
 				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
 				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
 					background-image: none !important;
@@ -108,6 +109,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 						background-image: none !important;
 					}
 				}
+				*/
 			</style>
 			<link rel="icon" href="/wp-content/uploads/2024/02/Design-sem-nome-69-150x150.png" sizes="32x32" />
 <link rel="icon" href="/wp-content/uploads/2024/02/Design-sem-nome-69-300x300.png" sizes="192x192" />
@@ -119,6 +121,56 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             /* Corrigir escrollamento no mobile */
             @media ( max-width: 786px) {
                 html, body { margin: 0 !important; overflow-x: hidden!important; }
+            }
+            
+            .bhf-hidden { display: none !important; margin: 0 !important; padding: 0 !important; height: 0 !important; }
+
+            /* Fix White Space Above Menu */
+            #masthead, .site-header, .elementor-location-header {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                top: 0 !important;
+                background-color: transparent !important;
+            }
+            #page {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            /* Force header to be at the very top */
+            body {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+            /* Remove huge gap in header container */
+            .elementor-325 .elementor-element.elementor-element-f3415fe {
+                gap: 0 !important; 
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            
+            /* Remove WordPress Admin Bar spacing if present */
+            html { margin-top: 0 !important; }
+            /* Reset top margin for body children to prevent collapsing margins issues */
+            body > *:first-child { margin-top: 0 !important; }
+
+            /* Fix Background Image for 2.webp section */
+            .elementor-element-3743374 {
+                background-image: linear-gradient(at center center, #02010100 0%, #031D45D6 100%), url("/wp-content/uploads/2024/02/2.webp") !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+            }
+
+            /* Fix Background for Home Banner (Img01 with Blue Overlay) */
+            .elementor-element-0d98571 {
+                background-image: linear-gradient(rgba(3, 29, 69, 0.9), rgba(3, 29, 69, 0.9)), url("/wp-content/uploads/2024/02/Img01.webp") !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+            }
+            /* Hide the original slideshow to show the CSS background */
+            .elementor-element-0d98571 .elementor-background-slideshow {
+                display: none !important;
             }
         </style>
 		</head>
