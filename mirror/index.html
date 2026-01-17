@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8" />
@@ -125,16 +125,21 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             
             .bhf-hidden { display: none !important; margin: 0 !important; padding: 0 !important; height: 0 !important; }
 
-            /* Fix White Space Above Menu */
+            /* Fix White Space Above Menu - Make Header Overlay */
             #masthead, .site-header, .elementor-location-header {
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
                 margin-top: 0 !important;
                 padding-top: 0 !important;
-                top: 0 !important;
                 background-color: transparent !important;
+                z-index: 999 !important;
             }
             #page {
                 margin-top: 0 !important;
                 padding-top: 0 !important;
+                position: relative !important;
             }
             /* Force header to be at the very top */
             body {
@@ -152,6 +157,16 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             html { margin-top: 0 !important; }
             /* Reset top margin for body children to prevent collapsing margins issues */
             body > *:first-child { margin-top: 0 !important; }
+            
+            /* Specific fix for white bar - likely container padding or gap */
+            .elementor-325 {
+                margin-top: -1px !important; /* Force pull up */
+                padding-top: 0 !important;
+            }
+            .elementor-location-header {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
 
             /* Fix Background Image for 2.webp section */
             .elementor-element-3743374 {
